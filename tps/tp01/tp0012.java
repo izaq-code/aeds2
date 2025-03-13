@@ -37,7 +37,7 @@ public class tp0012 {
     }
 
     public static String mapearNao() {
-        return "N" + (char) 195 + "O";
+        return "NAO";
     }
 
 

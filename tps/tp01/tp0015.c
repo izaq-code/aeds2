@@ -43,8 +43,9 @@ int main() {
         if ((int)numero == numero) {
             printf("%d\n", (int)numero);
         } else {
-            printf("%.3f\n", numero);
-        }
+         
+            printf("%g\n", numero);
+        }        
     }
     
     fclose(arquivo);

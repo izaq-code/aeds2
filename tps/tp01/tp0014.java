@@ -26,17 +26,21 @@ public class tp0014 {
             long posicao = (n - 1) * 8; 
             
             // Lendo os números de trás para frente
-            for (int i = 0; i < n; i++) {
-                arquivo.seek(posicao);
-                
-                double numero = arquivo.readDouble();
-                
-                System.out.println(numero);
-                
-                // Movendo o ponteiro para a posição anterior
-                posicao -= 8;
+        for (int i = 0; i < n; i++) {
+            arquivo.seek(posicao);
+            
+            double numero = arquivo.readDouble();
+            
+            // Verifica se o número é inteiro (sem casas decimais)
+            if (numero == (int) numero) {
+                System.out.println((int) numero); 
+            } else {
+                System.out.println(numero);    
             }
             
+            posicao -= 8;
+        }
+
             arquivo.close();
         } catch (IOException e) {
             e.printStackTrace();
